@@ -18,6 +18,7 @@ const HeaderCtn = styled.div`
   justify-content: center;
   gap: 20px;
 `;
+
 const TopHeader = styled.div`
   width: 100%;
   height: 30%;
@@ -102,6 +103,7 @@ button {
 
     &:hover {
         color: #704FE6;
+        font-size: 15px;
 
     }
 
@@ -109,26 +111,61 @@ button {
 `;
 
 const HomeButton = styled.div`
-width: 70px;
-height: 30px;
-border: 2px solid #704FE6;
-border-radius: 20px;
-text-align: center;
-display: flex;
-justify-content: center;
-align-items: center;
-transition: all 0.3s;
-cursor: pointer;
-color: #704FE6;
+  width: 70px;
+  height: 30px;
+  border: 2px solid #704FE6;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+  cursor: pointer;
+  color: #704FE6;
+  position: relative;
 
-
-&:hover{
+  &:hover {
     background-color: #704FE6;
     color: white;
+  }
 
-}
+  &:hover div {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+`;
 
+const HomeDropdown = styled.div`
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 150px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s;
+
+  span {
+    padding: 8px 15px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  span:hover {
+    background-color: #f2f2f2;
+    color: #704FE6;
+  }
 `;
 
 const HeaderRightCtn3 = styled.div`
@@ -156,9 +193,9 @@ const AccauntButton = styled.div`
   &:hover {
     background-color: #785DD7;
 
-    /* AccauntButton ichidagi AccauntButton2 ga ham hover effekt beramiz */
+
     div {
-      background-color: #704FE6; /* xohlagan rang */
+      background-color: #704FE6; 
     }
   }
 `;
@@ -219,7 +256,17 @@ export default function Header() {
             </HeaderRightCtn1>
             <HeaderRightCtn2>
 
-                <HomeButton>Home</HomeButton>
+                <HomeButton>
+                  Home
+                  <HomeDropdown>
+                    <span>Home 1</span>
+                    <span>Home 2</span>
+                    <span>Home 3</span>
+                    <span>Home 4</span>
+                  </HomeDropdown>
+                </HomeButton>
+
+                
 
                 <button>About Us</button>
                 <button>courses</button>
