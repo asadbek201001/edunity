@@ -7,6 +7,7 @@ import Footer from "../../components/Footer";
 import Container from "../../styles/Container";
 import HomeBck from "../../assets/homeBck.png";
 import HomeCard from "../../components/HomeCard";
+import Grow from "../../components/Grow";
 
 //browse images
 import HomeBrowse1 from "../../assets/homeBrowse1.png";
@@ -518,6 +519,7 @@ export default function Home1() {
         </BrowseCtn>
 
         <HomeCard />
+        <Grow />
 
       </HomeCtn>
 

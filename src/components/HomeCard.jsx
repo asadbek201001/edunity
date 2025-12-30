@@ -99,7 +99,6 @@ const CardCtn = styled.div`
 width: 100%;
 height: auto;
 margin-bottom: 50px;
-margin-top: 50px;
 `;
 const Grid = styled.div`
   display: grid;
