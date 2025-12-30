@@ -5,9 +5,14 @@ import Container from "../styles/Container";
 import PhoneIcon from "../assets/headerPhoneIcon.png";
 import MessageIcon from "../assets/headerMessageIcon.png";
 import LocationIcon from "../assets/headerLocationIcon.png";
-import Logo from "../assets/logo.png"
+import Logo from "../assets/logo.png";
 
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaYoutube,
+} from "react-icons/fa";
 
 const HeaderCtn = styled.div`
   width: 100%;
@@ -77,43 +82,36 @@ const HeaderLeftCtn = styled.div`
   gap: 5px;
 `;
 
-
-
 const HeaderRightCtn1 = styled.div`
-width: 20%;
-height: 100%;
-
+  width: 20%;
+  height: 100%;
 `;
 
-
 const HeaderRightCtn2 = styled.div`
-width: 60%;
-height: 100%;
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 50px;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
 
-button {
+  button {
     background-color: white;
     border: 0;
     cursor: pointer;
     transition: all 0.3s;
 
-
     &:hover {
-        color: #704FE6;
-        font-size: 15px;
-
+      color: #704fe6;
+      font-size: 15px;
     }
-
-}
+  }
 `;
 
 const HomeButton = styled.div`
   width: 70px;
   height: 30px;
-  border: 2px solid #704FE6;
+  border: 2px solid #704fe6;
   border-radius: 20px;
   text-align: center;
   display: flex;
@@ -121,11 +119,11 @@ const HomeButton = styled.div`
   align-items: center;
   transition: all 0.3s;
   cursor: pointer;
-  color: #704FE6;
+  color: #704fe6;
   position: relative;
 
   &:hover {
-    background-color: #704FE6;
+    background-color: #704fe6;
     color: white;
   }
 
@@ -144,7 +142,7 @@ const HomeDropdown = styled.div`
   background-color: white;
   border-radius: 10px;
   padding: 10px 0;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -164,38 +162,38 @@ const HomeDropdown = styled.div`
 
   span:hover {
     background-color: #f2f2f2;
-    color: #704FE6;
+    color: #704fe6;
   }
 `;
 
 const HeaderRightCtn3 = styled.div`
-width: 20%;
-height: 100%;
-display: flex;
-align-items: center;
-justify-content: center;
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const AccauntButton = styled.div`
   width: 220px;
   height: 50px;
   border-radius: 30px;
-  background-color: #704FE6;
+  background-color: #704fe6;
   display: flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   text-align: center;
   color: white;
-  position: relative; 
+  position: relative;
   cursor: pointer;
   transition: all 0.3s;
 
   &:hover {
-    background-color: #785DD7;
-
+    background-color: #785dd7;
+    transform: scale(1.05);
 
     div {
-      background-color: #704FE6; 
+      background-color: #704fe6;
     }
   }
 `;
@@ -203,15 +201,15 @@ const AccauntButton = styled.div`
 const AccauntButton2 = styled.div`
   width: 50px;
   height: 50px;
-  background-color: #785DD7;
+  background-color: #785dd7;
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50px;
   position: absolute;
-  right: 0; 
-  top: 50%; 
+  right: 0;
+  top: 50%;
   transform: translateY(-50%);
   transition: all 0.3s;
   cursor: pointer;
@@ -249,43 +247,34 @@ export default function Header() {
         </TopHeader>
 
         <BottomHeader>
-
           <Container>
             <HeaderRightCtn1>
-                <img src={Logo} alt="" />
+              <img src={Logo} alt="" />
             </HeaderRightCtn1>
             <HeaderRightCtn2>
+              <HomeButton>
+                Home
+                <HomeDropdown>
+                  <span>Home 1</span>
+                  <span>Home 2</span>
+                  <span>Home 3</span>
+                  <span>Home 4</span>
+                </HomeDropdown>
+              </HomeButton>
 
-                <HomeButton>
-                  Home
-                  <HomeDropdown>
-                    <span>Home 1</span>
-                    <span>Home 2</span>
-                    <span>Home 3</span>
-                    <span>Home 4</span>
-                  </HomeDropdown>
-                </HomeButton>
-
-                
-
-                <button>About Us</button>
-                <button>courses</button>
-                <button>Pages</button>
-                <button>Blog</button>
-                <button>Contact</button>
+              <button>About Us</button>
+              <button>courses</button>
+              <button>Pages</button>
+              <button>Blog</button>
+              <button>Contact</button>
             </HeaderRightCtn2>
             <HeaderRightCtn3>
-                
-                <AccauntButton>
+              <AccauntButton>
                 <span style={{ marginRight: "25px" }}>Create Accaunt</span>
-                    <AccauntButton2>
-                    {"→"}
-                    </AccauntButton2>
-                </AccauntButton>
+                <AccauntButton2>{"→"}</AccauntButton2>
+              </AccauntButton>
             </HeaderRightCtn3>
           </Container>
-
-
         </BottomHeader>
       </HeaderCtn>
     </>
